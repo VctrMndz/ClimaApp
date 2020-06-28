@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: 'Gotham Rounded', sans-serif;
+}
+
+body {
+	background: linear-gradient(to right, rgb(255, 255, 255), rgb(50, 35, 255));
+
+	margin: 0;
+	padding: 0;
+}
+
+.poweredby {
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+
+	color: aliceblue;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
