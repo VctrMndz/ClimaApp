@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima</title>  
+    <title>Clima</title> 
+    <link rel="shortcut icon" href="images/rainy.png" type="image/x-icon">    
     <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
+<div class="centered">    
     <div class="container">
         <div class="header">
             <div class="icon-container">
@@ -16,32 +18,33 @@
             </div>
         </div>
         <div class="content">
-            <div class="general-information">
-                <div class="Country" data-status>
-                    San Salvador 
-                </div>
-                <div class="Description" data-location>
+            <div class="general-information">             
+                <div class="description" data-location>
                     --------
+                </div>
+                <div class="country" data-status>
+                    San Salvador 
                 </div>
             </div>
             <div class="detail-section">
                 <div class="detail">
-                    <div class="title">Viento</div>
-                    <div class="wind-value" >--</div>
+                    <div class="title">Viento:&nbsp;</div>
+                    <div class="wind-value value" >--</div>
                 </div>
                 <div class="detail">
-                    <div class="title">Temperatura</div>
-                    <div class="temp-value" >--</div>
+                    <div class="title">Temperatura:&nbsp;</div>
+                    <div class="temp-value value" >--</div>
                 </div>
                 <div class="detail">
-                    <div class="title">Lluvia</div>
-                    <div class="rain-value" >--</div>
+                    <div class="title">Nubosidad:&nbsp;</div>
+                    <div class="clouds-value value" >--</div>
                 </div>
                 
             </div>
             
         </div>
     </div>
+</div>
     <a class="poweredby" href="https://openweathermap.org"  >Powered By OpenWeatherMap</a>
     <script src="/script.js"></script>
     
