@@ -5,22 +5,29 @@
 *::after {
 	box-sizing: border-box;
 	font-family: 'Jost', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 1.6rem;
-	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	background: url("images/bbg.jpg") center no-repeat;
+	background-size: cover;
 }
 html {
 	font-size: 10px;
 }
+ul {
+	list-style: none;
+}
 .poweredby {
 	position: absolute;
-	right: 25px;
-	bottom: 25px;
+	right: 15px;
+	bottom: 15px;
 	color: aliceblue;
+	font-size: 1rem;
 }
 
 .centered {
@@ -35,16 +42,16 @@ html {
 	flex-direction: column;
 	width: 80%;
 	align-items: center;
-	background-color: rgba(255, 255, 255, 0.575);
+	background-color: rgba(255, 255, 255, 0.7);
 	border-radius: 1rem;
-	height: 80%;
+	height: 80vh;
 }
 
 .header {
 	width: 100%;
 	text-align: center;
 	background-color: rgb(34, 34, 34);
-	height: 90px;
+	height: 9rem;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -53,10 +60,10 @@ html {
 }
 .icon-container {
 	position: relative;
-	top: 60px;
+	top: 6rem;
 	background-color: #222;
-	width: 150px;
-	height: 150px;
+	width: 15rem;
+	height: 15rem;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -64,18 +71,19 @@ html {
 }
 
 .icon-container img {
-	width: 150px;
+	width: 15rem;
 }
 .content {
 	width: 100%;
-	height: 100%;
-	padding: 2rem;
+	height: auto;
+	padding: 1rem;
 }
+
 .general-information {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 65px;
+	margin-top: 50px;
 }
 
 .description {
@@ -89,13 +97,12 @@ html {
 .detail-section {
 	display: flex;
 	width: 100%;
-	min-height: 22rem;
+	min-height: 10rem;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: space-between;
-	padding: 2rem 2.5rem;
-
-	font-size: 2.5rem;
+	padding: 1rem 2.5rem;
+	font-size: 2rem;
 }
 
 .detail {
@@ -110,4 +117,171 @@ html {
 }
 .value {
 	text-align: end;
+}
+
+.temp-value {
+	margin: auto;
+	font-size: 4rem;
+	font-weight: 400;
+}
+
+/* days forecast */
+
+.days {
+	display: flex;
+	justify-content: space-between;
+	min-height: 15rem;
+}
+.day-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	margin-right: 1rem;
+	text-align: center;
+}
+.day-date {
+	font-size: 2rem;
+	font-weight: bold;
+	margin: .7rem;
+}
+.day-description {
+	text-align: center;
+	height: 2rem;
+	font-size: 1.4rem;
+	line-height: 1;
+}
+.days-temp {
+	font-size: 1.6rem;
+}
+.icon-container-day {
+	height: 10rem;
+}
+.clouds-wind {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+}
+.title,
+.value {
+	flex: 1;
+}
+.detail-data {
+	display: flex;
+}
+@media screen and (min-width: 900px) {
+	.clouds-wind {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-around;
+	}
+	.title,
+	.value {
+		display: inline-block;
+	}
+	.container {
+		flex-direction: row;
+		width: 90%;
+		height: 90vh;
+	}
+
+	.header {
+		width: 13rem;
+		height: 100%;
+		border-top-left-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		align-items: center;
+	}
+
+	.icon-container {
+		position: relative;
+		top: 0;
+		left: 6.5rem;
+	}
+
+	.icon-container img {
+		width: 18rem;
+	}
+
+	.general-information {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2rem;
+	}
+
+	.description {
+		font-weight: bold;
+		font-size: 4rem;
+	}
+	.country {
+		font-size: 2.5rem;
+	}
+
+	.detail-section {
+		min-height: 20rem;
+		flex-direction: column;
+		padding: 3rem 10rem;
+	}
+
+	/* 	Days forecasts */
+
+	.days {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 3rem;
+		min-height: 24rem;
+	}
+	.day-container {
+		flex: 1;
+
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		margin-right: 1rem;
+		text-align: center;
+	}
+	.day-date {
+		font-size: 2.7rem;
+		font-weight: bold;
+	}
+	.day-description {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 6rem;
+		font-size: 2rem;
+	}
+	.days-temp {
+		font-size: 2.2rem;
+	}
+}
+@media screen and (max-width: 400px) {
+	.days {
+		flex-direction: column;
+		height: 11rem;
+	}
+	li:nth-child(2),
+	li:nth-child(3) {
+		display: none;
+	}
+	.days img {
+		width: 10rem;
+		height: 10rem;
+	}
+	.days-temp {
+		margin-top: -2rem;
+	}
+}
+
+@media screen and (max-height: 568px) {
+	.days {
+		display: none;
+	}
 }
